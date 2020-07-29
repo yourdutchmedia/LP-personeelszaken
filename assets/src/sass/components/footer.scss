@@ -1,0 +1,160 @@
+footer {
+  background: #0e1841;
+  padding-top: 120px;
+  padding-bottom: 75px;
+  background-size: 708px auto;
+  background-repeat: no-repeat;
+  background-position: 100% 145%;
+  position: relative;
+  @media only screen and (max-width: 991px) {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-position: 50% 108%;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-top: 0;
+  }
+
+  .mobile-socials {
+    display: none;
+    background-color: #101d4d;
+    padding: 20px 15px;
+    position: relative;
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: end;
+    }
+    h2 {
+      margin: 0;
+    }
+    div {
+      display: inline-block;
+      &:first-child {
+        width: 100px;
+        margin-right: 50px;
+        position: absolute;
+        left: 15px;
+        top: 28px;
+      }
+      a {
+        display: block;
+      }
+      img {
+        height: 40px !important;
+        margin-right: 30px;
+      }
+    }
+  }
+
+  li {
+    &::before {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  p,
+  a {
+    color: white;
+    font-size: 20px;
+    line-height: 16px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+    @media (max-width: 991px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .textwidget {
+    p {
+      margin-top: 25px;
+      margin-bottom: 0;
+
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-top: 25px;
+    }
+  }
+
+  .contactinformation {
+    @media only screen and (max-width: 991px) {
+      margin: 10px 0;
+    }
+  }
+
+  .footermenu {
+    @media only screen and (max-width: 991px) {
+      margin: 10px 0;
+    }
+  }
+
+  .footersocial {
+    position: relative;
+    .socials {
+      @media (max-width: 768px) {
+        display: none;
+      }
+      div {
+        display: inline-block;
+        &:first-child {
+          display: block;
+        }
+        img {
+          margin-top: 20px;
+          height: 50px !important;
+          margin-right: 30px;
+        }
+      }
+    }
+
+      .footerinfo {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        @media (max-width: 768px) {
+          position: static;
+        }
+      }
+  }
+}
+
+.copyright {
+  background: #101d4d;
+
+  .row {
+    height: 100px;
+
+    .right {
+      @media only screen and (min-width: 768px) {
+        text-align: right;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: white;
+      font-size: 15px;
+
+      a {
+        color: #8998c2;
+      }
+    }
+  }
+}
