@@ -6,7 +6,7 @@ get_header();
         <div class="container">
             <div class="logo"><?= wp_img('hero_logo') ?></div>
             <div class="row hero-row align-items-center">
-                <div class="col-sm-6">
+                <div class="col-sm-8">
                     <div class="title">
                         <h1><?= field('hero_titel') ?></h1>
                         <div class="border-top"></div>
@@ -17,32 +17,6 @@ get_header();
                     </div>
                     <div class="button">
                         <a href="#" class="full_btn">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="line"></div>
-    </section>
-
-    <section class="half-text text-top">
-        <div class="container container-right">
-            <div class="row align-items-center">
-                <div class="col-lg-7 col-sm-6">
-                    <div class="content">
-                        <div class="extra-content-large"><?= field('info_tekst_top_content') ?></div>
-                        <div class="more-info">Meer info</div>
-                    </div>
-                    <div class="title">
-                        <h2><?= field('info_tekst_titel') ?></h2>
-                    </div>
-                    <div class="content">
-                        <div class="extra-content-large"><?= field('info_tekst_extra_content') ?></div>
-                        <div class="more-info">Meer info</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 offset-lg-1">
-                    <div class="img-holder remove-mobile">
-                        <?= wp_img('info_tekst_afbeelding') ?>
                     </div>
                 </div>
             </div>
@@ -61,48 +35,42 @@ get_header();
         <div id="scroll_container" class="scroll_container">
 
         </div>
+        <div class="line"></div>
     </section>
 
-    <section class="half-text grey">
-        <div class="container container-left">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="img-holder">
-                        <?= wp_img('info_tekst_omgedraaid_afbeelding') ?>
+    <section class="intro-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title">
+                        <h2><?= field('intro_tekst_titel') ?></h2>
                     </div>
                 </div>
-                <div class="col-lg-7 col-sm-6 offset-lg-1">
-                    <div class="title">
-                        <h2><?= field('info_tekst_omgedraaid_titel') ?></h2>
-                    </div>
+                <div class="col-12">
                     <div class="content">
-                        <div class="extra-content-large">
-                        <?= field('info_tekst_omgedraaid_tekst') ?>
-                        <?= field('info_tekst_omgedraaid_extra_tekst') ?></div>
-                        <div class="more-info">Meer info</div>
+                        <?= field('intro_tekst_content') ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="half-text reverse-mobile">
-        <div class="container container-right">
+    <section class="half-text grey">
+        <div class="container container-left">
             <div class="row align-items-center">
-                <div class="col-lg-7 col-sm-6 order-sm-0 order-1">
-                    <div class="title">
-                        <h2><?= field('info_tekst_3_titel') ?></h2>
-                    </div>
-                    <div class="content">
-                        <?= field('info_tekst_3_content') ?>
-                        <div class="extra-content"><?= field('info_tekst_3_extra_content') ?></div>
-                        <div class="more-info">Meer info</div>
-
+                <div class="col-sm-5">
+                    <div class="img-holder">
+                        <?= wp_img('info_tekst_afbeelding') ?>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 offset-lg-1 order-sm-1 order-0">
-                    <div class="img-holder">
-                        <?= wp_img('info_tekst_3_afbeelding') ?>
+                <div class="col-sm-6 offset-lg-1">
+                    <div class="title">
+                        <h2><?= field('info_tekst_titel') ?></h2>
+                    </div>
+                    <div class="content">
+                        <div class="extra-content-large">
+                            <?= field('info_tekst_content') ?>
+                        <div class="more-info">Meer info</div>
                     </div>
                 </div>
             </div>
