@@ -5,83 +5,186 @@ body {
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
 }
+
 img {
   max-width: 100%;
   max-height: 100%;
 }
+
 .text-right {
   text-align: right;
 }
+
 .text-center {
   text-align: center;
 }
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
 
-section {
-  padding: 80px 0;
-  @media (max-width: 991px) {
-    padding: 50px 0;
-  }
-}
+main {
+  &.home {
 
-.container {
-  max-width: 1500px;
-  padding: 0 40px;
-  @media (max-width: 991px) {
-    padding: 0 15px;
-  }
-}
 
-a {
-  text-decoration: none;
-}
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
 
-* {
-  transition: all .2s ease-in-out;
-}
+    section {
+      padding: 80px 0;
+      @media (max-width: 991px) {
+        padding: 50px 0;
+      }
+    }
 
-.border-top {
-  border-left: 2px solid #df081d;
-  border-top: 2px solid #df081d;
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: 80px;
-  height: 80px;
-  @media (max-width: 991px) {
-    left: 0;
-    width: 50px;
-    height: 50px;
-  }
-  @media (max-width: 575px) {
-    width: 30px;
-    height: 30px;
-  }
-}
-.border-bottom {
-  border-right: 2px solid #df081d;
-  border-bottom: 2px solid #df081d;
-  position: absolute;
-  bottom: -20px;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  @media (max-width: 991px) {
-    width: 50px;
-    height: 50px;
-  }
-  @media (max-width: 575px) {
-    width: 30px;
-    height: 30px;
-  }
-}
+    .container {
+      max-width: 1500px;
+      padding: 0 40px;
+      @media (max-width: 991px) {
+        padding: 0 15px;
+      }
 
-.remove-mobile {
-  @media (max-width: 575px) {
-    display: none;
+      &.container-left {
+        padding-left: 0;
+        max-width: 100%;
+        padding-right: 12.5%;
+        @media (max-width: 1200px) {
+          padding-right: 40px;
+        }
+        @media (max-width: 991px) {
+          padding-right: 20px;
+        }
+
+        .title, .content {
+          @media (max-width: 991px) {
+            padding-left: 20px;
+          }
+          @media (max-width: 575px) {
+            margin-top: 50px;
+          }
+        }
+      }
+
+      &.container-right {
+        padding-right: 0;
+        max-width: 100%;
+        padding-left: 12.5%;
+        @media (max-width: 1200px) {
+          padding-left: 40px;
+        }
+        @media (max-width: 991px) {
+          padding-left: 20px;
+        }
+
+        .title, .content {
+          @media (max-width: 991px) {
+            padding-right: 20px;
+          }
+          @media (max-width: 575px) {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    * {
+      transition: all .2s ease-in-out;
+    }
+
+    .border-top {
+      border-left: 2px solid #df081d;
+      border-top: 2px solid #df081d;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      @media (max-width: 991px) {
+        left: 0;
+        width: 50px;
+        height: 50px;
+      }
+      @media (max-width: 575px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .border-bottom {
+      border-right: 2px solid #df081d;
+      border-bottom: 2px solid #df081d;
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      @media (max-width: 991px) {
+        width: 50px;
+        height: 50px;
+      }
+      @media (max-width: 575px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .remove-mobile {
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+
+    .content {
+      &.active {
+        .extra-content-large, .extra-content {
+          max-height: 2000px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .extra-content {
+      transition: all .8s ease-in-out;
+      overflow: hidden;
+      @media (max-width: 575px) {
+        max-height: 0;
+      }
+    }
+
+    .extra-content-large {
+      transition: all .8s ease-in-out;
+      overflow: hidden;
+      @media (max-width: 575px) {
+        max-height: 108px;
+      }
+    }
+
+    .no-content-mobile {
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+
+    .slick-dots {
+      bottom: -80px;
+
+      li {
+        &:before {
+          left: 6px;
+          top: 5px;
+          z-index: 5;
+          background: #7a7c7f;
+        }
+
+        &.slick-active {
+          &:before {
+            background: #df081d;
+          }
+        }
+      }
+    }
   }
 }

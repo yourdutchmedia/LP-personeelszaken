@@ -5,6 +5,7 @@
   border-radius: 30px;
   font-size: 22px;
   font-weight: 600;
+  text-decoration: none;
   &:hover {
     background: #fff;
     color: #df081d;
@@ -73,5 +74,16 @@
     -webkit-transform: translateY(36px) scaleY(2);
     transform: translateY(36px) scaleY(2);
     opacity: 0;
+  }
+}
+
+.more-info {
+  display: none;
+  color: #df081d;
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  @media (max-width: 575px) {
+    display: block;
   }
 }

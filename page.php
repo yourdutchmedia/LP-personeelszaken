@@ -16,7 +16,7 @@ get_header();
                         <p><?= field('hero_subtekst') ?></p>
                     </div>
                     <div class="button">
-                        <a href="#" class="full_btn">Lees meer</a>
+                        <a href="#scroll_container" class="full_btn">Doe de quickscan</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,8 @@ get_header();
                 </div>
                 <div class="col-12">
                     <div class="content">
-                        <?= field('intro_tekst_content') ?>
+                        <div class="extra-content-large"><?= field('intro_tekst_content') ?></div>
+                        <div class="more-info">Lees meer</div>
                     </div>
                 </div>
             </div>
@@ -70,7 +71,27 @@ get_header();
                     <div class="content">
                         <div class="extra-content-large">
                             <?= field('info_tekst_content') ?>
-                        <div class="more-info">Meer info</div>
+                        </div>
+                        <div class="more-info">Lees meer</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="info-content-bg"
+             style="background-image: url(<?= field('info_content_stappenplan_achtergrond') ?>)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-10">
+                    <div class="title">
+                        <h2><?= field('info_content_stappenplan_titel') ?></h2>
+                    </div>
+                    <div class="content">
+                        <div class="subtext">
+                            <p><?= field('info_content_stappenplan_subtekst') ?></p>
+                        </div>
+                        <div class="extra-content"><?= field('info_content_stappenplan_tekst') ?></div>
+                        <div class="more-info">Lees meer</div>
                     </div>
                 </div>
             </div>
@@ -80,15 +101,114 @@ get_header();
     <section class="cta">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-7">
+                <div class="col-md-10">
                     <div class="title">
                         <div class="border-top"></div>
+                        <div class="border-bottom"></div>
                         <h2><?= field('cta_titel') ?></h2>
                     </div>
                 </div>
-                <div class="col-md-5 text-right">
+            </div>
+        </div>
+    </section>
+
+    <section class="strip-card">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-sm-6">
+                    <div class="title">
+                        <h2><?= field('maatwerk_titel') ?></h2>
+                    </div>
+                    <div class="content">
+                        <p><?= field('maatwerk_ondertekst') ?></p>
+                    </div>
+                    <div class="no-content-mobile">
+                        <?= field('maatwerk_content') ?>
+                    </div>
                     <div class="button">
-                        <a href="<?= field('cta_button_link') ?>" class="full_btn"><?= field('cta_button_tekst') ?></a>
+                        <a href="<?= field('maatwerk_button_url') ?>"
+                           class="full_btn"><?= field('maatwerk_button_tekst') ?></a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 col-sm-6 offset-xl-1">
+                    <div class="img-holder">
+                        <?= wp_img('maatwerk_afbeelding') ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="packages">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="package-content no-content-mobile">
+                        <?= field('strippenkaart_content') ?>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-end package-slider">
+                <div class="col-12">
+                    <div class="package-block text-center">
+                        <div class="icon"><?= wp_img('strippenkaart_basis_plus_icon') ?></div>
+                        <div class="title"><p><?= field('strippenkaart_basis_plus_titel') ?></p></div>
+                        <div class="content text-left"><?= field('strippenkaart_basis_plus_content') ?></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="package-block top-result text-center">
+                        <div class="label text-center"><p>Meest gekozen</p></div>
+                        <div class="top-result-top">
+                            <div class="icon"><?= wp_img('strippenkaart_basis_icon') ?></div>
+                        </div>
+                        <div class="title"><p><?= field('strippenkaart_basis_titel') ?></p></div>
+                        <div class="content text-left"><?= field('strippenkaart_basis_plus_content') ?></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="package-block text-center">
+                        <div class="icon"><?= wp_img('strippenkaart_premium_icon') ?></div>
+                        <div class="title"><p><?= field('strippenkaart_premium_titel') ?></p></div>
+                        <div class="content text-left"><?= field('strippenkaart_premium_content') ?></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-btn">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="title">
+                        <div class="border-top"></div>
+                        <h2><?= field('cta_button_titel') ?></h2>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <div class="button">
+                        <a href="<?= field('cta_button_url') ?>" class="full_btn"><?= field('cta_button_tekst') ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="summary">
+        <div class="container container-right">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="title">
+                        <h2><?= field('samenvatting_titel') ?></h2>
+                    </div>
+                    <div class="content">
+                        <?= field('samenvatting_content') ?>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-lg-1 text-right">
+                    <div class="img-holder">
+                        <?= wp_img('samenvatting_afbeelding') ?>
                     </div>
                 </div>
             </div>
@@ -112,9 +232,6 @@ get_header();
                             <?= wp_img('contact_icon_tel') ?>
                         </div>
                         <div class="contact-text">
-                            <div class="person">
-                                <?= field('contact_tel_person') ?>
-                            </div>
                             <?= field('contact_icon_tel_tekst') ?>
                         </div>
                     </a>
